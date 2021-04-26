@@ -1,0 +1,57 @@
+<h1>Investigation of Indoor Positioning Techniques</h1>
+<h2>Overview</h2>
+<p>In this paper, we present and compare results from our testing of 10 different indoor positioning algorithms involving different measurement techniques. We also discuss various issues that we encountered with our development and deployment of these algorithms as well as discuss whether any of these algorithms are viable for deployment today. </p>
+<h4>Techniques Explored</h4>
+
+<h2>Datasets</h2>
+
+<h3><em>Link to Datasets</em></h3>
+<h3>Environments</h3>
+
+<h4>HackLab</h4>
+<img src="Images/HLAB_152.jpg" alt="Image of HackLab" style="width: 400px;">
+<img src="Images/HLAB_835.jpg" alt="Image of HackLab" style="width: 400px;">
+<img src="Images/HLAB_841.jpg" alt="Image of HackLab" style="width: 400px;">
+<img src="Images/HLAB_952.jpg" alt="Image of HackLab" style="width: 400px;">
+<img src="Images/HLAB_962.jpg" alt="Image of HackLab" style="width: 400px;">
+
+<h5>3D Scan of HackLab</h5>
+
+<h4>TA Room</h4>
+
+<img src="Images/TA (1).jpg" alt="Image of TA Room" style="width: 400px;">
+<img src="Images/TA (2).jpg" alt="Image of TA Room" style="width: 400px;">
+<img src="Images/TA (3).jpg" alt="Image of TA Room" style="width: 400px;">
+<img src="Images/TA (10).jpg" alt="Image of TA Room" style="width: 400px;">
+<img src="Images/TA (11).jpg" alt="Image of TA Room" style="width: 400px;">
+<img src="Images/TA (12).jpg" alt="Image of TA Room" style="width: 400px;">
+
+<h5>Setup Example</h5>
+<img src="Images/TA (7).jpg" alt="Image of TA Room" style="width: 400px;">
+<img src="Images/TA (8).jpg" alt="Image of TA Room" style="width: 400px;">
+
+
+<h2>Results</h2>
+<h4>Marker-based Positioning Results</h4>
+<img src="Images/ar_gt.png" alt="">
+<img src="Images/ar_result.png" alt=""">
+<img src="Images/ar_result_knn.png" alt=""">
+
+<h4>RSSI Results</h4>
+<img src="Images/rssi_gt.png" alt="">
+<img src="Images/rssi_result.png" alt=""">
+<img src="Images/rssi_result_knn.png" alt=""">
+
+<h4>RTT Results</h4>
+<img src="Images/rtt_gt.png" alt="">
+<img src="Images/rtt_result.png" alt=""">
+<img src="Images/rtt_result_knn.png" alt=""">
+
+<h2>Future Work</h2>
+<h4>Exploring Scalability</h4>
+<p>Most of the tests in this work were conducted in a controlled environment (5x10 m). It would be valuable to explore how each of these techniques performs in larger, noisier environments.</p>
+<h4>Combining Techniques</h4>
+<p>All of the solutions presented in this research were tested in isolation. A potential area to look into would be how well these techniques perform with each other. This could potentially lead to the creation of large interdependent indoor localization solutions. &nbsp;</p>
+<h4>Developing Smartphone Data Generation Tools</h4>
+<p>As depth sensors and LIDAR sensors are starting to be integrated into smartphones, like the iPhone 12 Pro, collecting accurate data to train indoor camera relocalization models, like PoseNet, may become easier. One area to look into would be to leverage such sensors along with AR APIs to develop such tools for generating datasets.&nbsp;</p>
+<p>An example of an environment scanned with iPhone 12 Pro&apos;s LIDAR sensor is below.</p>
