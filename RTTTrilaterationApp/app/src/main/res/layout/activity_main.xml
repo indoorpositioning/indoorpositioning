@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <view
+        android:id="@+id/canvas"
+        class="com.example.rtttrilaterationapp.MyCanvas"
+        android:layout_width="fill_parent"
+        android:layout_height="450dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <Button
+        android:id="@+id/scanBtn"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="14dp"
+        android:layout_marginRight="14dp"
+        android:background="@android:color/holo_blue_light"
+        android:text="Scan"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.571"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/canvas" />
+
+    <EditText
+        android:id="@+id/xCoord"
+        android:layout_width="140dp"
+        android:layout_height="45dp"
+        android:ems="10"
+        android:hint="x"
+        android:inputType="numberSigned"
+        app:layout_constraintEnd_toStartOf="@+id/yCoord"
+        app:layout_constraintHorizontal_bias="0.191"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scanBtn" />
+
+    <EditText
+        android:id="@+id/yCoord"
+        android:layout_width="140dp"
+        android:layout_height="45dp"
+        android:ems="10"
+        android:hint="y"
+        android:inputType="numberSigned"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.565"
+        app:layout_constraintStart_toEndOf="@+id/xCoord"
+        app:layout_constraintTop_toBottomOf="@+id/scanBtn" />
+
+    <Button
+        android:id="@+id/thirdBtn"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="44dp"
+        android:layout_marginRight="44dp"
+        android:text="Go To Accuracy"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/debugBtn" />
+
+    <Button
+        android:id="@+id/secondBtn"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="Go To Add APs"
+        app:layout_constraintEnd_toStartOf="@+id/thirdBtn"
+        app:layout_constraintHorizontal_bias="0.656"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/debugBtn" />
+
+    <Button
+        android:id="@+id/debugBtn"
+        android:layout_width="181dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="112dp"
+        android:layout_marginLeft="112dp"
+        android:text="Debugging Values"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/xCoord" />
+
+    <TextView
+        android:id="@+id/debugText"
+        android:layout_width="250dp"
+        android:layout_height="41dp"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/secondBtn" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

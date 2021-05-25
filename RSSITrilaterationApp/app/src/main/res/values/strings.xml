@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">RSSITrilaterationApp</string>
+    <string-array name="frequencies_array">
+        <item>All</item>
+        <item>2.4 GHz</item>
+        <item>5 GHz</item>
+    </string-array>
+</resources>

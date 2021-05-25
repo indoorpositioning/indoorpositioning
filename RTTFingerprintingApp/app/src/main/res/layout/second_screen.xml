@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ListView
+        android:id="@+id/wifiList"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/bssid"
+        android:layout_width="246dp"
+        android:layout_height="40dp"
+        android:ems="10"
+        android:hint="BSSID"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scanBtn" />
+
+    <Button
+        android:id="@+id/scanBtn"
+        android:layout_width="246dp"
+        android:layout_height="34dp"
+        android:background="@android:color/holo_blue_light"
+        android:text="Scan"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ssid" />
+
+    <EditText
+        android:id="@+id/xCoord"
+        android:layout_width="140dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="12dp"
+        android:ems="10"
+        android:hint="x"
+        android:inputType="numberSigned"
+        app:layout_constraintEnd_toStartOf="@+id/yCoord"
+        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addBtn" />
+
+    <EditText
+        android:id="@+id/yCoord"
+        android:layout_width="140dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="44dp"
+        android:layout_marginRight="44dp"
+        android:ems="10"
+        android:hint="y"
+        android:inputType="numberSigned"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addBtn" />
+
+    <Button
+        android:id="@+id/removeBtn"
+        android:layout_width="100dp"
+        android:layout_height="35dp"
+        android:background="@android:color/holo_red_light"
+        android:text="Remove AP"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.346"
+        app:layout_constraintStart_toEndOf="@+id/addBtn"
+        app:layout_constraintTop_toBottomOf="@+id/bssid" />
+
+    <Button
+        android:id="@+id/addBtn"
+        android:layout_width="100dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="84dp"
+        android:layout_marginLeft="84dp"
+        android:background="@android:color/holo_red_light"
+        android:text="Add AP"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bssid" />
+
+    <Button
+        android:id="@+id/homeBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="36dp"
+        android:layout_marginRight="36dp"
+        android:text="Home"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addPointButton" />
+
+    <TextView
+        android:id="@+id/arraysText"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="4dp"
+        android:hint="Arrays"
+        app:layout_constraintEnd_toStartOf="@+id/homeBtn"
+        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addPointButton" />
+
+    <Button
+        android:id="@+id/addPointButton"
+        android:layout_width="246dp"
+        android:layout_height="34dp"
+        android:background="@android:color/holo_blue_light"
+        android:text="Add Data Point"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/xCoord" />
+
+    <EditText
+        android:id="@+id/ssid"
+        android:layout_width="187dp"
+        android:layout_height="38dp"
+        android:layout_marginEnd="36dp"
+        android:layout_marginRight="36dp"
+        android:ems="10"
+        android:hint="SSID"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toStartOf="@+id/spinner"
+        app:layout_constraintTop_toBottomOf="@+id/wifiList" />
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="122dp"
+        android:layout_height="32dp"
+        android:layout_marginEnd="36dp"
+        android:layout_marginRight="36dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/wifiList" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
