@@ -30,13 +30,13 @@ Michael Liut -
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 
-[contributors-shield]: https://img.shields.io/github/contributors/ShahmeerShahid/ResumeWords
-[contributors-url]: https://github.com/ShahmeerShahid/ResumeWords/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/ShahmeerShahid/ResumeWords
-[forks-url]: https://github.com/ShahmeerShahid/ResumeWords/network/members
-[stars-shield]: https://img.shields.io/github/stars/ShahmeerShahid/ResumeWords
-[stars-url]: https://github.com/ShahmeerShahid/ResumeWords/stargazers
-[issues-shield]: https://img.shields.io/github/issues/ShahmeerShahid/ResumeWords
-[issues-url]: https://github.com/ShahmeerShahid/ResumeWords/issues
-[license-shield]: https://img.shields.io/github/license/ShahmeerShahid/ResumeWords
-[license-url]: https://github.com/ShahmeerShahid/ResumeWords/blob/master/LICENSE
+[contributors-shield]: https://img.shields.io/github/contributors/indoorpositioning/indoorpositioning
+[contributors-url]: https://github.com/indoorpositioning/indoorpositioning/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/indoorpositioning/indoorpositioning
+[forks-url]: https://github.com/indoorpositioning/indoorpositioning/network/members
+[stars-shield]: https://img.shields.io/github/stars/indoorpositioning/indoorpositioning
+[stars-url]: https://github.com/indoorpositioning/indoorpositioning/stargazers
+[issues-shield]: https://img.shields.io/github/issues/indoorpositioning/indoorpositioning
+[issues-url]: https://github.com/indoorpositioning/indoorpositioning/issues
+[license-shield]: https://img.shields.io/github/license/indoorpositioning/indoorpositioning
+[license-url]: https://github.com/indoorpositioning/indoorpositioning/blob/master/LICENSE
