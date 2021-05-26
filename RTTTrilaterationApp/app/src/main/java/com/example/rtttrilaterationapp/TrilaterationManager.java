@@ -22,14 +22,14 @@ public class TrilaterationManager implements Serializable {
     }
 
     //add an access point
-    public void addAP(String BSSID, int x, int y){
+    public void addAP(String BSSID, int x, int y) {
         int[] coords = {x, y};
         this.coordinates.put(BSSID, coords);
         this.distances.put(BSSID, -1.0); //default distance, will be overwritten
     }
 
     //remove an access point
-    public void removeAP(String BSSID){
+    public void removeAP(String BSSID) {
         this.coordinates.remove(BSSID);
         this.distances.remove(BSSID);
     }
@@ -48,7 +48,7 @@ public class TrilaterationManager implements Serializable {
         return this.coordinates.containsKey(bssid);
     }
 
-    public void makeDoubleArrays(){
+    public void makeDoubleArrays() {
         //sort coordinates and distances by BSSID
         TreeMap<String, int[]> sortedCoordinates = new TreeMap<>();
         sortedCoordinates.putAll(this.coordinates);

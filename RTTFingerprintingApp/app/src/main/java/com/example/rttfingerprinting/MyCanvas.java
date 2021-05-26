@@ -17,7 +17,7 @@ public class MyCanvas extends View {
     Bitmap bmp;
     Bitmap scaledbmp;
 
-    public MyCanvas(Context context, AttributeSet attributes){
+    public MyCanvas(Context context, AttributeSet attributes) {
         super(context, attributes);
         this.x = 0.0;
         this.y = 0.0;
@@ -31,7 +31,7 @@ public class MyCanvas extends View {
     }
 
     @Override
-    protected void onDraw(Canvas canvas){
+    protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
         paint = new Paint();
 
@@ -44,7 +44,7 @@ public class MyCanvas extends View {
         canvas.drawCircle((float)this.x, (float)this.y, 25, paint);
     }
 
-    public void setPosition(double x, double y){
+    public void setPosition(double x, double y) {
         this.x = Math.max(0, x);
         this.y = Math.max(0, y);
         this.invalidate();

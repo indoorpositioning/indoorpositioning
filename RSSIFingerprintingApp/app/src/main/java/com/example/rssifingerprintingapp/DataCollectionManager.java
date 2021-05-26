@@ -17,19 +17,19 @@ public class DataCollectionManager implements Serializable {
 
     public int getNumAps() { return this.numAps; }
 
-    public void addAP(String bssid){
+    public void addAP(String bssid) {
         if(!(this.accessPoints.contains(bssid))) {
             this.accessPoints.add(bssid);
         }
     }
 
-    public void removeAP(String bssid){ this.accessPoints.remove(bssid); }
+    public void removeAP(String bssid) { this.accessPoints.remove(bssid); }
 
     public boolean bssidExists(String bssid){
         return this.accessPoints.contains(bssid);
     }
 
-    public void addRecord(int x, int y, TreeMap<String, Integer> levels){
+    public void addRecord(int x, int y, TreeMap<String, Integer> levels) {
         //int[] coords = {x, y};
         //this.data.put(coords, levels);
         this.data.add(x + "," + y + "," + levels.values().toString());

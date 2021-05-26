@@ -40,7 +40,7 @@ public class SecondActivity extends Activity {
     private EditText ssid;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState){
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.second_screen);
@@ -89,7 +89,7 @@ public class SecondActivity extends Activity {
             }
         });
 
-        if(!wifiManager.isWifiEnabled()){
+        if(!wifiManager.isWifiEnabled()) {
             Toast.makeText(this, "Wifi is disabled", Toast.LENGTH_LONG).show();
             wifiManager.setWifiEnabled(true);
         }
@@ -108,7 +108,7 @@ public class SecondActivity extends Activity {
         dataCollectionManager = (DataCollectionManager)intent.getSerializableExtra("dataCollectionManager");
     }
 
-    public void openHomeScreen(){
+    public void openHomeScreen() {
         //go back to home screen and send trilaterationManager
         Intent intent = new Intent();
         intent.putExtra("dataCollectionManager", dataCollectionManager);
@@ -116,7 +116,7 @@ public class SecondActivity extends Activity {
         finish();
     }
 
-    private void scanWifi(){
+    private void scanWifi() {
         arrayList.clear();
         registerReceiver(wifiReceiver, new IntentFilter(WifiManager.SCAN_RESULTS_AVAILABLE_ACTION));
         wifiManager.startScan();
@@ -133,10 +133,10 @@ public class SecondActivity extends Activity {
             String selectedFrequency = frequencySpinner.getSelectedItem().toString();
             boolean all = false;
             int filterFrequency = 5;
-            if(selectedFrequency.equals("All")){
+            if(selectedFrequency.equals("All")) {
                 all = true;
             } else {
-                if(selectedFrequency.equals("2.4 GHz")){
+                if(selectedFrequency.equals("2.4 GHz")) {
                     filterFrequency = 2;
                 }
             }
@@ -159,7 +159,7 @@ public class SecondActivity extends Activity {
 
             String x = xCoord.getText().toString();
             String y = yCoord.getText().toString();
-            if(x.trim().length() > 0 && y.trim().length() > 0){
+            if(x.trim().length() > 0 && y.trim().length() > 0) {
                 if (dataCollectionManager.getAccessPoints().size() == dataCollectionManager.getNumAps()) {
                     dataCollectionManager.addRecord(Integer.parseInt(x), Integer.parseInt(y), levels); //add record to data collection manager
                 } else {

@@ -1,6 +1,6 @@
-# Investigation of Indoor Positioning Techniques
-
 <div align="center">
+
+# Investigation of Indoor Positioning Techniques
 
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
@@ -20,6 +20,12 @@ Distributed under the MIT License. See `LICENSE` for more information.
 ## Contact
 
 [Lazar Lolic](https://www.linkedin.com/in/lazar-lolic-207779184/) - lazarlolic12@gmail.com
+
+Ali Raza -
+
+Shahmir Akhter -
+
+Michael Liut -
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->

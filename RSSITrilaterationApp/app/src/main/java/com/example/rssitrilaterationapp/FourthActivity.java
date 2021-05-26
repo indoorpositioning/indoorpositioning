@@ -14,7 +14,7 @@ public class FourthActivity extends Activity {
     private Button homeBtn;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState){
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.debug_screen);
@@ -38,7 +38,7 @@ public class FourthActivity extends Activity {
         distances.setText(trilaterationManager.getDistancesString());
     }
 
-    public void openHomeScreen(){
+    public void openHomeScreen() {
         //go back to home screen
         Intent intent = new Intent();
         setResult(RESULT_OK, intent);

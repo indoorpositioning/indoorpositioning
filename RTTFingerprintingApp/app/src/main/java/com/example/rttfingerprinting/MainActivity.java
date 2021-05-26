@@ -11,7 +11,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.pm.PackageManager;
-import android.net.MacAddress;
 import android.net.wifi.WifiManager;
 import android.net.wifi.ScanResult;
 import android.net.wifi.rtt.RangingRequest;
@@ -28,7 +27,6 @@ import android.widget.Toast;
 
 import java.io.IOException;
 import java.util.*;
-import java.lang.Math;
 import java.util.concurrent.Executor;
 
 public class MainActivity extends AppCompatActivity {
@@ -101,40 +99,40 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        if(!wifiManager.isWifiEnabled()){
+        if(!wifiManager.isWifiEnabled()) {
             Toast.makeText(this, "Wifi is disabled", Toast.LENGTH_LONG).show();
             wifiManager.setWifiEnabled(true);
         }
     }
 
-    public void openSecondScreen(){
+    public void openSecondScreen() {
         Intent intent = new Intent(this, SecondActivity.class);
         intent.putExtra("dataCollectionManager", dataCollectionManager);
         final int result = 1; //we will be expecting a result
         startActivityForResult(intent, result); //go to second screen and send dataCollectionManager
     }
 
-    public void openThirdScreen(){
+    public void openThirdScreen() {
         Intent intent = new Intent(this, ThirdActivity.class);
         intent.putExtra("accuracyManager", accuracyManager);
         intent.putExtra("dataCollectionManager", dataCollectionManager);
         startActivity(intent); //go to third screen and send accuracyManager
     }
 
-    public void openDebugScreen(){
+    public void openDebugScreen() {
         Intent intent = new Intent(this, FourthActivity.class);
         intent.putExtra("dataCollectionManager", dataCollectionManager);
         startActivity(intent); //go to debug screen and send dataCollectionManager
     }
 
     @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data){
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         //get the updated dataCollectionManager instance from the second screen
         dataCollectionManager = (DataCollectionManager)data.getSerializableExtra("dataCollectionManager");
     }
 
-    private void scanWifi(){
+    private void scanWifi() {
         if(dataCollectionManager.getAccessPoints().size() == dataCollectionManager.getNumAps()) {
             registerReceiver(wifiReceiver, new IntentFilter(WifiRttManager.ACTION_WIFI_RTT_STATE_CHANGED));
             //wifiManager.startScan();
@@ -155,7 +153,7 @@ public class MainActivity extends AppCompatActivity {
                 //build ranging request
                 List<ScanResult> results = wifiManager.getScanResults();
                 RangingRequest.Builder builder = new RangingRequest.Builder();
-                for(ScanResult res: results){
+                for(ScanResult res: results) {
                     if(dataCollectionManager.bssidExists(res.BSSID)){
                         builder.addAccessPoint(res);
                     }
@@ -191,7 +189,7 @@ public class MainActivity extends AppCompatActivity {
                         TreeMap<String, Float> bssids = new TreeMap<>();
 
                         //interpret results
-                        for(RangingResult result : results){
+                        for(RangingResult result : results) {
                             //if measurement was successful
                             if(result.getStatus() == RangingResult.STATUS_SUCCESS) {
                                 bssids.put(result.getMacAddress().toString(), (float) result.getDistanceMm() / 1000);

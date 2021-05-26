@@ -84,40 +84,40 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        if(!wifiManager.isWifiEnabled()){
+        if(!wifiManager.isWifiEnabled()) {
             Toast.makeText(this, "Wifi is disabled", Toast.LENGTH_LONG).show();
             wifiManager.setWifiEnabled(true);
         }
     }
 
-    public void openSecondScreen(){
+    public void openSecondScreen() {
         Intent intent = new Intent(this, SecondActivity.class);
         intent.putExtra("dataCollectionManager", dataCollectionManager);
         final int result = 1; //we will be expecting a result
         startActivityForResult(intent, result); //go to second screen and send dataCollectionManager
     }
 
-    public void openThirdScreen(){
+    public void openThirdScreen() {
         Intent intent = new Intent(this, ThirdActivity.class);
         intent.putExtra("accuracyManager", accuracyManager);
         intent.putExtra("dataCollectionManager", dataCollectionManager);
         startActivity(intent); //go to third screen and send accuracyManager
     }
 
-    public void openDebugScreen(){
+    public void openDebugScreen() {
         Intent intent = new Intent(this, FourthActivity.class);
         intent.putExtra("dataCollectionManager", dataCollectionManager);
         startActivity(intent); //go to debug screen and send dataCollectionManager
     }
 
     @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data){
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         //get the updated dataCollectionManager instance from the second screen
         dataCollectionManager = (DataCollectionManager)data.getSerializableExtra("dataCollectionManager");
     }
 
-    private void scanWifi(){
+    private void scanWifi() {
         if(dataCollectionManager.getAccessPoints().size() == dataCollectionManager.getNumAps()) {
             registerReceiver(wifiReceiver, new IntentFilter(WifiManager.SCAN_RESULTS_AVAILABLE_ACTION));
             wifiManager.startScan();
@@ -135,8 +135,8 @@ public class MainActivity extends AppCompatActivity {
 
             TreeMap<String, Float> bssids = new TreeMap<>();
 
-            for(ScanResult res : results){
-                if(dataCollectionManager.bssidExists(res.BSSID)){
+            for(ScanResult res : results) {
+                if(dataCollectionManager.bssidExists(res.BSSID)) {
                     bssids.put(res.BSSID, (float) res.level);
                 }
             }
@@ -146,7 +146,7 @@ public class MainActivity extends AppCompatActivity {
             int size = rssiCollection.size();
             Float[] rssiArray = rssiCollection.toArray(new Float[size]);
             float[] floatArray = new float[size];
-            for(int i = 0; i < size; i++){
+            for(int i = 0; i < size; i++) {
                 floatArray[i] = (float)rssiArray[i];
             }
 

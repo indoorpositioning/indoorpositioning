@@ -17,7 +17,6 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 
 public class SecondActivity extends Activity {
@@ -40,7 +39,7 @@ public class SecondActivity extends Activity {
     private EditText ssid;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState){
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.second_screen);
@@ -70,7 +69,7 @@ public class SecondActivity extends Activity {
                 String name = bssid.getText().toString();
                 String x = xCoord.getText().toString();
                 String y = yCoord.getText().toString();
-                if(name.trim().length() > 0 && x.trim().length() > 0 && y.trim().length() > 0){
+                if(name.trim().length() > 0 && x.trim().length() > 0 && y.trim().length() > 0) {
                     trilaterationManager.addAP(name, Integer.parseInt(x), Integer.parseInt(y)); //add AP and coordinates to trilateration manager
                 }
 
@@ -95,7 +94,7 @@ public class SecondActivity extends Activity {
             }
         });
 
-        if(!wifiManager.isWifiEnabled()){
+        if(!wifiManager.isWifiEnabled()) {
             Toast.makeText(this, "Wifi is disabled", Toast.LENGTH_LONG).show();
             wifiManager.setWifiEnabled(true);
         }
@@ -114,7 +113,7 @@ public class SecondActivity extends Activity {
         trilaterationManager = (TrilaterationManager)intent.getSerializableExtra("trilaterationManager");
     }
 
-    public void openHomeScreen(){
+    public void openHomeScreen() {
         //go back to home screen and send trilaterationManager
         Intent intent = new Intent();
         intent.putExtra("trilaterationManager", trilaterationManager);
@@ -122,7 +121,7 @@ public class SecondActivity extends Activity {
         finish();
     }
 
-    private void scanWifi(){
+    private void scanWifi() {
         arrayList.clear();
         registerReceiver(wifiReceiver, new IntentFilter(WifiManager.SCAN_RESULTS_AVAILABLE_ACTION));
         wifiManager.startScan();
@@ -139,16 +138,16 @@ public class SecondActivity extends Activity {
             String selectedFrequency = frequencySpinner.getSelectedItem().toString();
             boolean all = false;
             int filterFrequency = 5;
-            if(selectedFrequency.equals("All")){
+            if(selectedFrequency.equals("All")) {
                 all = true;
             } else {
-                if(selectedFrequency.equals("2.4 GHz")){
+                if(selectedFrequency.equals("2.4 GHz")) {
                     filterFrequency = 2;
                 }
             }
             String ssidString = ssid.getText().toString();
 
-            for(ScanResult res : results){
+            for(ScanResult res : results) {
                 //filter based on frequency and ssid
                 if((all || res.frequency / 1000 == filterFrequency) && (res.SSID.length() >= ssidString.length() && ssidString.equalsIgnoreCase(res.SSID.substring(0, ssidString.length())))) {
                     //calculate distances

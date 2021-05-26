@@ -57,7 +57,7 @@ public class SecondActivity extends Activity {
 
     @RequiresApi(api = Build.VERSION_CODES.P)
     @Override
-    protected void onCreate(Bundle savedInstanceState){
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.second_screen);
@@ -114,7 +114,7 @@ public class SecondActivity extends Activity {
             }
         });
 
-        if(!wifiManager.isWifiEnabled()){
+        if(!wifiManager.isWifiEnabled()) {
             Toast.makeText(this, "Wifi is disabled", Toast.LENGTH_LONG).show();
             wifiManager.setWifiEnabled(true);
         }
@@ -133,7 +133,7 @@ public class SecondActivity extends Activity {
         dataCollectionManager = (DataCollectionManager)intent.getSerializableExtra("dataCollectionManager");
     }
 
-    public void openHomeScreen(){
+    public void openHomeScreen() {
         //go back to home screen and send trilaterationManager
         Intent intent = new Intent();
         intent.putExtra("dataCollectionManager", dataCollectionManager);
@@ -141,14 +141,14 @@ public class SecondActivity extends Activity {
         finish();
     }
 
-    private void scanWifi(){
+    private void scanWifi() {
         arrayList.clear();
         registerReceiver(wifiReceiver, new IntentFilter(WifiManager.SCAN_RESULTS_AVAILABLE_ACTION));
         wifiManager.startScan();
         Toast.makeText(this, "Scanning ...", Toast.LENGTH_SHORT).show();
     }
 
-    private void addDataPoint(){
+    private void addDataPoint() {
         registerReceiver(wifiRttReceiver, new IntentFilter(WifiRttManager.ACTION_WIFI_RTT_STATE_CHANGED));
         //wifiManager.startScan();
         wifiRttReceiver.onReceive(getApplicationContext(), getIntent());
@@ -165,17 +165,17 @@ public class SecondActivity extends Activity {
             String selectedFrequency = frequencySpinner.getSelectedItem().toString();
             boolean all = false;
             int filterFrequency = 5;
-            if(selectedFrequency.equals("All")){
+            if(selectedFrequency.equals("All")) {
                 all = true;
             } else {
-                if(selectedFrequency.equals("2.4 GHz")){
+                if(selectedFrequency.equals("2.4 GHz")) {
                     filterFrequency = 2;
                 }
             }
             String ssidString = ssid.getText().toString();
 
             TreeMap<String, Integer> levels = new TreeMap<String, Integer>();
-            for(ScanResult res : results){
+            for(ScanResult res : results) {
                 //filter based on frequency and ssid
                 if((all || res.frequency / 1000 == filterFrequency) && (res.SSID.length() >= ssidString.length() && ssidString.equalsIgnoreCase(res.SSID.substring(0, ssidString.length())))) {
                     //for wifi list
@@ -196,8 +196,8 @@ public class SecondActivity extends Activity {
                 //build ranging request
                 List<ScanResult> results = wifiManager.getScanResults();
                 RangingRequest.Builder builder = new RangingRequest.Builder();
-                for(ScanResult res: results){
-                    if(dataCollectionManager.bssidExists(res.BSSID)){
+                for(ScanResult res: results) {
+                    if(dataCollectionManager.bssidExists(res.BSSID)) {
                         builder.addAccessPoint(res);
                     }
                 }
@@ -232,11 +232,11 @@ public class SecondActivity extends Activity {
                         //interpret results
                         TreeMap<String, Float> distances = new TreeMap<String, Float>();
 
-                        for(RangingResult result : results){
+                        for(RangingResult result : results) {
                             //if measurement was successful
-                            if(result.getStatus() == RangingResult.STATUS_SUCCESS){
+                            if(result.getStatus() == RangingResult.STATUS_SUCCESS) {
                                 //add to trilateration manager
-                                if(dataCollectionManager.bssidExists(result.getMacAddress().toString())){
+                                if(dataCollectionManager.bssidExists(result.getMacAddress().toString())) {
                                     distances.put(result.getMacAddress().toString(), (float)result.getDistanceMm() / 1000);
                                 }
                             } else {
@@ -247,7 +247,7 @@ public class SecondActivity extends Activity {
 
                         String x = xCoord.getText().toString();
                         String y = yCoord.getText().toString();
-                        if(x.trim().length() > 0 && y.trim().length() > 0){
+                        if(x.trim().length() > 0 && y.trim().length() > 0) {
                             if (dataCollectionManager.getAccessPoints().size() == dataCollectionManager.getNumAps()) {
                                 dataCollectionManager.addRecord(Integer.parseInt(x), Integer.parseInt(y), distances); //add record to data collection manager
                                 arraysText.setText(Arrays.toString(distances.values().toArray(new Float[dataCollectionManager.getNumAps()])));

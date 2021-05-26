@@ -11,7 +11,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.pm.PackageManager;
-import android.net.MacAddress;
 import android.net.wifi.WifiManager;
 import android.net.wifi.ScanResult;
 import android.net.wifi.rtt.RangingRequest;
@@ -26,7 +25,6 @@ import android.os.Bundle;
 import android.widget.TextView;
 import android.widget.Toast;
 import java.util.*;
-import java.lang.Math;
 import java.util.concurrent.Executor;
 
 public class MainActivity extends AppCompatActivity {
@@ -140,7 +138,7 @@ public class MainActivity extends AppCompatActivity {
                 //build ranging request
                 List<ScanResult> results = wifiManager.getScanResults();
                 RangingRequest.Builder builder = new RangingRequest.Builder();
-                for(ScanResult res: results){
+                for(ScanResult res: results) {
                     if(trilaterationManager.bssidExists(res.BSSID)){
                         builder.addAccessPoint(res);
                     }
@@ -175,9 +173,9 @@ public class MainActivity extends AppCompatActivity {
                         trilaterationManager.clearDistances();
 
                         //interpret results
-                        for(RangingResult result : results){
+                        for(RangingResult result : results) {
                             //if measurement was successful
-                            if(result.getStatus() == RangingResult.STATUS_SUCCESS){
+                            if(result.getStatus() == RangingResult.STATUS_SUCCESS) {
                                 //add to trilateration manager
                                 trilaterationManager.addDistance(result.getMacAddress().toString(), (double)result.getDistanceMm() / 1000);
                             } else {
@@ -198,7 +196,7 @@ public class MainActivity extends AppCompatActivity {
                             //add entry for accuracyManager
                             String x = xCoordText.getText().toString();
                             String y = yCoordText.getText().toString();
-                            if(x.trim().length() > 0 && y.trim().length() > 0){
+                            if(x.trim().length() > 0 && y.trim().length() > 0) {
                                 accuracyManager.addEntry(position[0], position[1], Double.parseDouble(x), Double.parseDouble(y)); //add entry to accuracyManager
                             }
                         } else {

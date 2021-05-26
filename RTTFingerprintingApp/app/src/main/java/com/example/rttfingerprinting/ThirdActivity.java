@@ -75,7 +75,7 @@ public class ThirdActivity extends Activity {
         averageText.setText(Double.toString(accuracyManager.getAverageDistance()));
     }
 
-    public void openHomeScreen(){
+    public void openHomeScreen() {
         //go back to home screen
         Intent intent = new Intent();
         setResult(RESULT_OK, intent);
@@ -91,8 +91,7 @@ public class ThirdActivity extends Activity {
         startActivityForResult(intent, CREATE_REQUEST_CODE);
     }
 
-    public void saveFile()
-    {
+    public void saveFile() {
         Intent intent = new Intent(Intent.ACTION_OPEN_DOCUMENT);
         intent.addCategory(Intent.CATEGORY_OPENABLE);
         intent.setType("text/plain");
@@ -104,8 +103,7 @@ public class ThirdActivity extends Activity {
     public void onActivityResult(int requestCode, int resultCode, Intent resultData) {
         Uri currentUri = null;
 
-        if (resultCode == Activity.RESULT_OK)
-        {
+        if (resultCode == Activity.RESULT_OK) {
             if (requestCode == CREATE_REQUEST_CODE) {
                 if (resultData != null) {
                 }
@@ -119,9 +117,8 @@ public class ThirdActivity extends Activity {
         }
     }
 
-    private void writeFileContent(Uri uri)
-    {
-        try{
+    private void writeFileContent(Uri uri) {
+        try {
             ParcelFileDescriptor pfd = this.getContentResolver().openFileDescriptor(uri, "w");
 
             FileOutputStream fileOutputStream = new FileOutputStream(pfd.getFileDescriptor());
@@ -132,7 +129,7 @@ public class ThirdActivity extends Activity {
                 arrayList = accuracyManager.getEntries();
             }
 
-            for (String s :  arrayList){
+            for (String s :  arrayList) {
                 fileOutputStream.write(s.getBytes());
                 fileOutputStream.write(System.getProperty("line.separator").getBytes());
             }

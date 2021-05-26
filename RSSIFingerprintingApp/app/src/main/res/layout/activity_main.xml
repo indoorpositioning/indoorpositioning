@@ -7,16 +7,6 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <!--    <ListView-->
-    <!--        android:id="@+id/wifiList"-->
-    <!--        android:layout_width="wrap_content"-->
-    <!--        android:layout_height="450dp"-->
-    <!--        android:layout_marginBottom="15dp"-->
-    <!--        app:layout_constraintBottom_toTopOf="@+id/scanBtn"-->
-    <!--        app:layout_constraintStart_toStartOf="parent"-->
-    <!--        app:layout_constraintTop_toTopOf="parent" >-->
-    <!--    </ListView>-->
-
     <view
         android:id="@+id/canvas"
         class="com.example.rssifingerprintingapp.MyCanvas"

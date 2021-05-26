@@ -75,39 +75,39 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        if(!wifiManager.isWifiEnabled()){
+        if(!wifiManager.isWifiEnabled()) {
             Toast.makeText(this, "Wifi is disabled", Toast.LENGTH_LONG).show();
             wifiManager.setWifiEnabled(true);
         }
     }
 
-    public void openSecondScreen(){
+    public void openSecondScreen() {
         Intent intent = new Intent(this, SecondActivity.class);
         intent.putExtra("trilaterationManager", trilaterationManager);
         final int result = 1; //we will be expecting a result
         startActivityForResult(intent, result); //go to second screen and send trilaterationManager
     }
 
-    public void openThirdScreen(){
+    public void openThirdScreen() {
         Intent intent = new Intent(this, ThirdActivity.class);
         intent.putExtra("accuracyManager", accuracyManager);
         startActivity(intent); //go to third screen and send accuracyManager
     }
 
-    public void openDebugScreen(){
+    public void openDebugScreen() {
         Intent intent = new Intent(this, FourthActivity.class);
         intent.putExtra("trilaterationManager", trilaterationManager);
         startActivity(intent); //go to debug screen and send trilaterationManager
     }
 
     @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data){
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         //get the updated trilaterationManager instance from the second screen
         trilaterationManager = (TrilaterationManager)data.getSerializableExtra("trilaterationManager");
     }
 
-    private void scanWifi(){
+    private void scanWifi() {
         registerReceiver(wifiReceiver, new IntentFilter(WifiManager.SCAN_RESULTS_AVAILABLE_ACTION));
         wifiManager.startScan();
         Toast.makeText(this, "Scanning ...", Toast.LENGTH_SHORT).show();
@@ -119,9 +119,9 @@ public class MainActivity extends AppCompatActivity {
         public void onReceive(Context context, Intent intent){
             results = wifiManager.getScanResults();
             unregisterReceiver(this);
-            for(ScanResult res : results){
+            for(ScanResult res : results) {
                 //if AP is in trilateration manager, add distance
-                if(trilaterationManager.bssidExists(res.BSSID)){
+                if(trilaterationManager.bssidExists(res.BSSID)) {
                     debugText.setText("Calculating distance for an AP...");
                     double distance = Math.pow(10, ((27.55 - (20 * Math.log10(res.frequency))) - res.level) / 20);
                     trilaterationManager.addDistance(res.BSSID, distance);
@@ -141,7 +141,7 @@ public class MainActivity extends AppCompatActivity {
                 //add entry for accuracyManager
                 String x = xCoordText.getText().toString();
                 String y = yCoordText.getText().toString();
-                if(x.trim().length() > 0 && y.trim().length() > 0){
+                if(x.trim().length() > 0 && y.trim().length() > 0) {
                     accuracyManager.addEntry(position[0], position[1], Double.parseDouble(x), Double.parseDouble(y)); //add entry to accuracyManager
                 }
             }
