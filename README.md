@@ -19,13 +19,13 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 ## Contact
 
-[Lazar Lolic](https://www.linkedin.com/in/lazar-lolic-207779184/) - lazarlolic12@gmail.com
+[Lazar Lolic](https://www.linkedin.com/in/lazar-lolic-207779184/) - lazar.lolic@mail.utoronto.ca
 
-Ali Raza -
+[Ali Raza](https://www.linkedin.com/in/ali-raza-6410ba161/) - alisyed.raza@mail.utoronto.ca
 
-Shahmir Akhter -
+[Shahmir Akhter](https://www.linkedin.com/in/shahmir-akhter-80b553194/) - shahmir.akhter@mail.utoronto.ca
 
-Michael Liut -
+[Michael Liut](https://www.michaelliut.ca/) - michael.liut@utoronto.ca
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
@@ -39,4 +39,4 @@ Michael Liut -
 [issues-shield]: https://img.shields.io/github/issues/indoorpositioning/indoorpositioning
 [issues-url]: https://github.com/indoorpositioning/indoorpositioning/issues
 [license-shield]: https://img.shields.io/github/license/indoorpositioning/indoorpositioning
-[license-url]: https://github.com/indoorpositioning/indoorpositioning/blob/master/LICENSE
+[license-url]: https://github.com/indoorpositioning/indoorpositioning/master/LICENSE
