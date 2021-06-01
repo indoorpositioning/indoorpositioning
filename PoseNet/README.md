@@ -1,4 +1,4 @@
-THe original caffe implementation of PoseNet that was presented by Kendall et al can be found (here)[https://github.com/alexgkendall/caffe-posenet].
+The original caffe implementation of PoseNet that was presented by Kendall et al can be found [here](https://github.com/alexgkendall/caffe-posenet).
 ## Requirements
 Matplotlib, Pytorch, Numpy
 ## How to train
