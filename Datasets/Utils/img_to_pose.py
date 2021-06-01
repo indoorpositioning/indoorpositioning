@@ -11,7 +11,7 @@ if __name__ == "__main__":
 
     rgb_dir = ".\\UTM_Hacklab_Images\\rgb"
     depth_dir = ".\\UTM_Hacklab_Images\\depth"
-    pose_file = ".\\UTM_Hacklab_Images\\hacklab_poses_v2.1.txt"
+    pose_file = ".\\UTM_Hacklab_Images\\hacklab_poses.txt"
 
     for filename in os.listdir(rgb_dir):
         if filename.endswith(".jpg") or filename.endswith(".png"):
