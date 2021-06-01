@@ -27,6 +27,9 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 [Michael Liut](https://www.michaelliut.ca/) - michael.liut@utoronto.ca
 
+## Website
+[Project Website](https://indoorpositioning.github.io/indoorpositioning/index.html)
+
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 
