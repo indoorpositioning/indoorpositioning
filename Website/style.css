@@ -1,12 +1,12 @@
 body {
     background-color: #F3F3F3;
-    color: black; 
+    color: #202020; 
 }
 
 header {
     height: 60px;
     width: 100%;
-    background-color: #283747;
+    background-color: #FFDF6C;
     position: relative;
 }
 
@@ -15,11 +15,15 @@ a {
 }
 
 a:link, a:visited{
-    color: black;   
+    padding: 3px;
+    color: black;
+    text-decoration: underline;
 }
 
 a:link:hover{
+    padding: 3px;
     background-color: #932242;
+    text-decoration: underline overline;
 }
 
 nav {
