@@ -1,13 +1,25 @@
 body {
-    background-color: lightblue;
+    background-color: #F3F3F3;
     color: black; 
 }
 
 header {
     height: 60px;
     width: 100%;
-    background-color:lightcoral;
+    background-color: #283747;
     position: relative;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:link, a:visited{
+    color: black;   
+}
+
+a:link:hover{
+    background-color: #932242;
 }
 
 nav {
