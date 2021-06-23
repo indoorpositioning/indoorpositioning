@@ -5,14 +5,26 @@ body {
 
 header {
     height: 60px;
+    top: 0;
     width: 100%;
     background-color: #FFDF6C;
-    position: relative;
+    position: fixed;
 }
 
 a {
     text-decoration: none;
     font-family: 'Poppins', sans-serif;
+}
+
+/* .navbar a{
+    display: block;
+    float: left;
+    padding: 3px;
+    color: black;
+} */
+
+.navbar a:hover{
+    background: #932242;
 }
 
 a:link, a:visited{
@@ -21,11 +33,11 @@ a:link, a:visited{
     text-decoration: underline;
 }
 
-a:link:hover{
+/* a:link:hover{
     padding: 3px;
     background-color: #932242;
     text-decoration: underline overline;
-}
+} */
 
 nav {
     text-align: center;
@@ -54,12 +66,25 @@ h1, h2, h3, h4, h5{
     text-align: center;
 }
 
-p{
-    font-family: 'Poppins', sans-serif;
+h1{
+    padding-top: 70px;
 }
 
 .paragraph{
     margin: auto;
     width: 80%;
     text-align: justify;
+}
+
+.links{
+    margin: auto;
+    text-align: center;
+}
+
+.images{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    padding-left: 10%;
 }

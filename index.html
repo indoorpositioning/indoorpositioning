@@ -12,14 +12,17 @@
     </head>
     <body>
         <header>
-            <nav>
-                <ul id="header_list">
-                    <li><a href="#Overview">Overview</a> </li>
-                    <li><a href="#Datasets">Datasets</a></li>
-                    <li><a href="#Results">Results</a></li>
-                    <li><a href="#Future_Work">Future Work</a></li>
-                </ul>
-            </nav>
+            <div class="navbar">
+                <nav>
+                    <ul id="header_list">
+                        <li><a href="#Overview">Overview</a> </li>
+                        <li><a href="#Datasets">Datasets</a></li>
+                        <li><a href="#Environments">Environments</a></li>
+                        <li><a href="#Results">Results</a></li>
+                        <li><a href="#Future_Work">Future Work</a></li>
+                    </ul>
+                </nav>
+            </div>
         </header>
 
         <h1>Investigation of Indoor Positioning Techniques</h1>
@@ -28,79 +31,99 @@
             <h2>Overview</h2>
 
             <div class="paragraph">
-                <p> &emsp; In this paper, we present and compare results from our testing of 10 different indoor positioning algorithms involving different measurement techniques. We also discuss various issues that we encountered with our development and deployment of these algorithms as well as discuss whether any of these algorithms are viable for deployment today. </p>
+                <p>  In this paper, we present and compare results from our testing of 10 different indoor positioning algorithms involving different measurement techniques. We also discuss various issues that we encountered with our development and deployment of these algorithms as well as discuss whether any of these algorithms are viable for deployment today. </p>
             </div>
 
-            <h4>Techniques Explored</h4>
+            <h3>Techniques Explored</h3>
+
+            <div class="paragraph">
+                <p>The techniques that we explored were RSSI Trilateration, RTT Trilateration, Marker-based Trilateration, RSSI Fingerprinting, RTT Fingerprinting, Marker-based Fingerprinting, and PoseNet. The fingerprinting techniques included both k-nearest neighbors and neural network implementations.</p>
+            </div>
         </a>
         
             
         <a id="Datasets">
             <h2>Datasets</h2>
-            <div class="paragraph">
+            <div class="links">
                 <a href="https://github.com/indoorpositioning/indoorpositioning/tree/main/Datasets/Hacklab">Hacklab</a>
                 <a href="https://github.com/indoorpositioning/indoorpositioning/tree/main/Datasets/TARoom/Marker-based">TA Room - Marker-based Data]</a>
                 <a href="https://github.com/indoorpositioning/indoorpositioning/tree/main/Datasets/TARoom/RTT">TA Room - RTT Data</a>
                 <a href="https://github.com/indoorpositioning/indoorpositioning/tree/main/Datasets/TARoom/RSSI">TA Room - RSSI Data</a>
             </div>
+        </a>
+        <a id="Environments">
 
-            <h3>Environments</h3>
+            <h2>Environments</h2>
 
-            <h4>HackLab</h4>
-            <img src="Images/HLAB_152.jpg" alt="Image of HackLab" style="width: 400px;">
-            <img src="Images/HLAB_835.jpg" alt="Image of HackLab" style="width: 400px;">
-            <img src="Images/HLAB_841.jpg" alt="Image of HackLab" style="width: 400px;">
-            <img src="Images/HLAB_952.jpg" alt="Image of HackLab" style="width: 400px;">
-            <img src="Images/HLAB_962.jpg" alt="Image of HackLab" style="width: 400px;">
+            <h3>HackLab</h3>
+            <div class="images">
+                <img src="Images/HLAB_152.jpg" alt="Image of HackLab" style="width: 400px;">
+                <img src="Images/HLAB_835.jpg" alt="Image of HackLab" style="width: 400px;">
+                <img src="Images/HLAB_841.jpg" alt="Image of HackLab" style="width: 400px;">
+                <img src="Images/HLAB_952.jpg" alt="Image of HackLab" style="width: 400px;">
+                <img src="Images/HLAB_962.jpg" alt="Image of HackLab" style="width: 400px;">
+            </div>
 
-            <h5>3D Scan of HackLab</h5>
+            <!-- <h5>3D Scan of HackLab</h5> -->
 
-            <h4>TA Room</h4>
+            <h3>TA Room</h3>
+            <div class="images">
+                <img src="Images/TA (1).jpg" alt="Image of TA Room" style="width: 400px;">
+                <img src="Images/TA (2).jpg" alt="Image of TA Room" style="width: 400px;">
+                <img src="Images/TA (3).jpg" alt="Image of TA Room" style="width: 400px;">
+                <img src="Images/TA (10).jpg" alt="Image of TA Room" style="width: 400px;">
+                <img src="Images/TA (11).jpg" alt="Image of TA Room" style="width: 400px;">
+                <img src="Images/TA (12).jpg" alt="Image of TA Room" style="width: 400px;">
+            </div>
 
-            <img src="Images/TA (1).jpg" alt="Image of TA Room" style="width: 400px;">
-            <img src="Images/TA (2).jpg" alt="Image of TA Room" style="width: 400px;">
-            <img src="Images/TA (3).jpg" alt="Image of TA Room" style="width: 400px;">
-            <img src="Images/TA (10).jpg" alt="Image of TA Room" style="width: 400px;">
-            <img src="Images/TA (11).jpg" alt="Image of TA Room" style="width: 400px;">
-            <img src="Images/TA (12).jpg" alt="Image of TA Room" style="width: 400px;">
-
-            <h5>Setup Example</h5>
-            <img src="Images/TA (7).jpg" alt="Image of TA Room" style="width: 400px;">
-            <img src="Images/TA (8).jpg" alt="Image of TA Room" style="width: 400px;">
+            <h4>Setup Example</h4>
+            <div class="images">
+                <img src="Images/TA (7).jpg" alt="Image of TA Room" style="width: 400px;">
+                <img src="Images/TA (8).jpg" alt="Image of TA Room" style="width: 400px;">
+            </div>
+            
         </a>
         
         <a id="Results">
             <h2>Results</h2>
             <h4>Marker-based Positioning Results</h4>
-            <img src="Images/ar_gt.png" alt="">
-            <img src="Images/ar_result.png" alt=""">
-            <img src="Images/ar_result_knn.png" alt=""">
+            <div class="images">
+                <img src="Images/ar_gt.png" alt="">
+                <img src="Images/ar_result.png" alt=""">
+                <img src="Images/ar_result_knn.png" alt=""">
+            </div>    
 
             <h4>RSSI Results</h4>
-            <img src="Images/rssi_gt.png" alt="">
-            <img src="Images/rssi_result.png" alt=""">
-            <img src="Images/rssi_result_knn.png" alt=""">
+            <div class="images">
+                <img src="Images/rssi_gt.png" alt="">
+                <img src="Images/rssi_result.png" alt=""">
+                <img src="Images/rssi_result_knn.png" alt=""">
+            </div>
+            
 
             <h4>RTT Results</h4>
-            <img src="Images/rtt_gt.png" alt="">
-            <img src="Images/rtt_result.png" alt=""">
-            <img src="Images/rtt_result_knn.png" alt=""">
+            <div class="images">
+                <img src="Images/rtt_gt.png" alt="">
+                <img src="Images/rtt_result.png" alt=""">
+                <img src="Images/rtt_result_knn.png" alt=""">
+            </div>
+            
         </a>
 
         <a id="Future_Work">
             <h2>Future Work</h2>
             <h4>Exploring Scalability</h4>
             <div class="paragraph">
-                <p> &emsp; Most of the tests in this work were conducted in a controlled environment (5x10 m). It would be valuable to explore how each of these techniques performs in larger, noisier environments.</p>
+                <p>  Most of the tests in this work were conducted in a controlled environment (5x10 m). It would be valuable to explore how each of these techniques performs in larger, noisier environments.</p>
             </div>
             <h4>Combining Techniques</h4>
             <div class="paragraph">
-                <p> &emsp; All of the solutions presented in this research were tested in isolation. A potential area to look into would be how well these techniques perform with each other. This could potentially lead to the creation of large interdependent indoor localization solutions. &nbsp;</p>
+                <p>  All of the solutions presented in this research were tested in isolation. A potential area to look into would be how well these techniques perform with each other. This could potentially lead to the creation of large interdependent indoor localization solutions. &nbsp;</p>
             </div>
             <h4>Developing Smartphone Data Generation Tools</h4>
             <div class="paragraph">
-                <p> &emsp; As depth sensors and LIDAR sensors are starting to be integrated into smartphones, like the iPhone 12 Pro, collecting accurate data to train indoor camera relocalization models, like PoseNet, may become easier. One area to look into would be to leverage such sensors along with AR APIs to develop such tools for generating datasets.&nbsp;</p>
-                <p> &emsp; An example of an environment scanned with iPhone 12 Pro&apos;s LIDAR sensor is below.</p>
+                <p>  As depth sensors and LIDAR sensors are starting to be integrated into smartphones, like the iPhone 12 Pro, collecting accurate data to train indoor camera relocalization models, like PoseNet, may become easier. One area to look into would be to leverage such sensors along with AR APIs to develop such tools for generating datasets.&nbsp;</p>
+                <p>  An example of an environment scanned with iPhone 12 Pro&apos;s LIDAR sensor is below.</p>
             </div>
         </a>       
     </body>
