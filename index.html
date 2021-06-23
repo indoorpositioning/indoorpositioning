@@ -3,8 +3,12 @@
     <head>
         <meta charset="utf-8">
         <title>Indoor Positioning</title>
-        <link rel="stylesheet" href="Website/style.css">
+        <link rel="stylesheet" href="Website/css/normalize.css">
+        <link rel="stylesheet" href="Website/css/style.css">
         <link rel="icon" href="Website/UT_SLAM_logo.jpg">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Roboto+Condensed&display=swap" rel="stylesheet">
     </head>
     <body>
         <header>
@@ -22,7 +26,10 @@
         
         <a id="Overview">
             <h2>Overview</h2>
-            <p>In this paper, we present and compare results from our testing of 10 different indoor positioning algorithms involving different measurement techniques. We also discuss various issues that we encountered with our development and deployment of these algorithms as well as discuss whether any of these algorithms are viable for deployment today. </p>
+
+            <div class="paragraph">
+                <p> &emsp; In this paper, we present and compare results from our testing of 10 different indoor positioning algorithms involving different measurement techniques. We also discuss various issues that we encountered with our development and deployment of these algorithms as well as discuss whether any of these algorithms are viable for deployment today. </p>
+            </div>
 
             <h4>Techniques Explored</h4>
         </a>
@@ -30,11 +37,12 @@
             
         <a id="Datasets">
             <h2>Datasets</h2>
-
-            <a href="https://github.com/indoorpositioning/indoorpositioning/tree/main/Datasets/Hacklab">Hacklab</a>
-            <a href="https://github.com/indoorpositioning/indoorpositioning/tree/main/Datasets/TARoom/Marker-based">TA Room - Marker-based Data]</a>
-            <a href="https://github.com/indoorpositioning/indoorpositioning/tree/main/Datasets/TARoom/RTT">TA Room - RTT Data</a>
-            <a href="https://github.com/indoorpositioning/indoorpositioning/tree/main/Datasets/TARoom/RSSI">TA Room - RSSI Data</a>
+            <div class="paragraph">
+                <a href="https://github.com/indoorpositioning/indoorpositioning/tree/main/Datasets/Hacklab">Hacklab</a>
+                <a href="https://github.com/indoorpositioning/indoorpositioning/tree/main/Datasets/TARoom/Marker-based">TA Room - Marker-based Data]</a>
+                <a href="https://github.com/indoorpositioning/indoorpositioning/tree/main/Datasets/TARoom/RTT">TA Room - RTT Data</a>
+                <a href="https://github.com/indoorpositioning/indoorpositioning/tree/main/Datasets/TARoom/RSSI">TA Room - RSSI Data</a>
+            </div>
 
             <h3>Environments</h3>
 
@@ -82,12 +90,18 @@
         <a id="Future_Work">
             <h2>Future Work</h2>
             <h4>Exploring Scalability</h4>
-            <p>Most of the tests in this work were conducted in a controlled environment (5x10 m). It would be valuable to explore how each of these techniques performs in larger, noisier environments.</p>
+            <div class="paragraph">
+                <p>Most of the tests in this work were conducted in a controlled environment (5x10 m). It would be valuable to explore how each of these techniques performs in larger, noisier environments.</p>
+            </div>
             <h4>Combining Techniques</h4>
-            <p>All of the solutions presented in this research were tested in isolation. A potential area to look into would be how well these techniques perform with each other. This could potentially lead to the creation of large interdependent indoor localization solutions. &nbsp;</p>
+            <div class="paragraph">
+                <p>All of the solutions presented in this research were tested in isolation. A potential area to look into would be how well these techniques perform with each other. This could potentially lead to the creation of large interdependent indoor localization solutions. &nbsp;</p>
+            </div>
             <h4>Developing Smartphone Data Generation Tools</h4>
-            <p>As depth sensors and LIDAR sensors are starting to be integrated into smartphones, like the iPhone 12 Pro, collecting accurate data to train indoor camera relocalization models, like PoseNet, may become easier. One area to look into would be to leverage such sensors along with AR APIs to develop such tools for generating datasets.&nbsp;</p>
-            <p>An example of an environment scanned with iPhone 12 Pro&apos;s LIDAR sensor is below.</p>
+            <div class="paragraph">
+                <p>As depth sensors and LIDAR sensors are starting to be integrated into smartphones, like the iPhone 12 Pro, collecting accurate data to train indoor camera relocalization models, like PoseNet, may become easier. One area to look into would be to leverage such sensors along with AR APIs to develop such tools for generating datasets.&nbsp;</p>
+                <p>An example of an environment scanned with iPhone 12 Pro&apos;s LIDAR sensor is below.</p>
+            </div>
         </a>       
     </body>
 </html>
