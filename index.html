@@ -126,7 +126,7 @@
                 <p>  An example of an environment scanned with iPhone 12 Pro&apos;s LIDAR sensor is below.</p>
             </div>
         </a> 
-        <div>
+        <div id="renders">
             <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r126/three.min.js" integrity="sha512-n8IpKWzDnBOcBhRlHirMZOUvEq2bLRMuJGjuVqbzUJwtTsgwOgK5aS0c1JA647XWYfqvXve8k3PtZdzpipFjgg==" crossorigin="anonymous"></script>
             <script src="https://unpkg.com/three@0.126.0/examples/js/loaders/GLTFLoader.js"></script>
         <script>
@@ -134,29 +134,23 @@
 			const camera = new THREE.PerspectiveCamera( 75, (window.innerWidth) / (window.innerHeight), 0.1, 1000 );
 
 			const renderer = new THREE.WebGLRenderer();
-			renderer.setSize( window.innerWidth/4, window.innerHeight/4 );
+			renderer.setSize( window.innerWidth/2, window.innerHeight/2 );
 			document.body.appendChild( renderer.domElement );
 
-			// const geometry = new THREE.BoxGeometry();
-			// const material = new THREE.MeshBasicMaterial( { color: 0x00ff00 } );
-			// const cube = new THREE.Mesh( geometry, material );
-			// scene.add( cube );
-            camera.position.z = 5;
+
+            const light = new THREE.AmbientLight( 0x404040 ); // soft white light
+            light.intensity = 3.5;
+            scene.add( light );
+
+            let model = 0;
             const loader = new THREE.GLTFLoader();
             loader.setCrossOrigin('anonymous');
-            loader.load('./Hacklab.glb', function ( gltf ) {
-
+            loader.load('./LiDAR/Hacklab.glb', function ( gltf ) {
+                model = gltf.scene;
                 scene.add( gltf.scene );
 
-                const animate = function () {
-                    requestAnimationFrame( animate );
-
-                    gltf.scene.rotation.x += 0.01;
-                    gltf.scene.rotation.y += 0.01;
-
-                    renderer.render( scene, camera );
-                };
-                animate();
+                model.position.x = 2;
+                model.scale *= 4;
 
             }, undefined, function ( error ) {
 
@@ -164,6 +158,12 @@
 
             } );
 
+            const animate = function () {
+				requestAnimationFrame( animate );
+                camera.rotation.y += 0.002;
+				renderer.render( scene, camera );
+			};
+			animate();
 			
 		</script>
         </div>      
