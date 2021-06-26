@@ -88,3 +88,10 @@ h1{
     width: 80%;
     padding-left: 10%;
 }
+
+canvas{
+    margin: auto;
+    width: 50%;
+    border: 3px solid #FFDF6C;
+    padding: 10px;
+}
