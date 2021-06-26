@@ -137,39 +137,39 @@
 			renderer.setSize( window.innerWidth/4, window.innerHeight/4 );
 			document.body.appendChild( renderer.domElement );
 
-			// const geometry = new THREE.BoxGeometry();
-			// const material = new THREE.MeshBasicMaterial( { color: 0x00ff00 } );
-			// const cube = new THREE.Mesh( geometry, material );
-			// scene.add( cube );
+			const geometry = new THREE.BoxGeometry();
+			const material = new THREE.MeshBasicMaterial( { color: 0x00ff00 } );
+			const cube = new THREE.Mesh( geometry, material );
+			scene.add( cube );
             camera.position.z = 5;
             const loader = new THREE.GLTFLoader();
-            loader.setCrossOrigin('anonymous');
-            loader.load('./Hacklab.glb', function ( gltf ) {
+            // loader.setCrossOrigin('anonymous');
+            // loader.load('./Hacklab.glb', function ( gltf ) {
 
-                scene.add( gltf.scene );
-                requestAnimationFrame( animate );
+            //     scene.add( gltf.scene );
+            //     requestAnimationFrame( animate );
 
-                gltf.scene.rotation.x += 0.01;
-                gltf.scene.rotation.y += 0.01;
+            //     gltf.scene.rotation.x += 0.01;
+            //     gltf.scene.rotation.y += 0.01;
 
-                renderer.render( scene, camera );
+            //     renderer.render( scene, camera );
 
-            }, undefined, function ( error ) {
+            // }, undefined, function ( error ) {
 
-                console.error( error );
+            //     console.error( error );
 
-            } );
+            // } );
 
-			// const animate = function () {
-			// 	requestAnimationFrame( animate );
+			const animate = function () {
+				requestAnimationFrame( animate );
 
-			// 	cube.rotation.x += 0.01;
-			// 	cube.rotation.y += 0.01;
+				cube.rotation.x += 0.01;
+				cube.rotation.y += 0.01;
 
-			// 	renderer.render( scene, camera );
-			// };
+				renderer.render( scene, camera );
+			};
 
-			//animate();
+			animate();
 		</script>
         </div>      
     </body>
