@@ -127,6 +127,7 @@
             </div>
         </a> 
         <div id="renders">
+            <button onclick="switchModel()" id="modelBttn"></button>
             <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r126/three.min.js" integrity="sha512-n8IpKWzDnBOcBhRlHirMZOUvEq2bLRMuJGjuVqbzUJwtTsgwOgK5aS0c1JA647XWYfqvXve8k3PtZdzpipFjgg==" crossorigin="anonymous"></script>
             <script src="https://unpkg.com/three@0.126.0/examples/js/loaders/GLTFLoader.js"></script>
         <script>
@@ -142,21 +143,55 @@
             light.intensity = 3.5;
             scene.add( light );
 
-            let model = 0;
+            let hackModel, taModel;
+            let currModelName;
+
             const loader = new THREE.GLTFLoader();
             loader.setCrossOrigin('anonymous');
             loader.load('./LiDAR/Hacklab.glb', function ( gltf ) {
-                model = gltf.scene;
+                hackModel = gltf.scene;
+                hackModel.name = "Hacklab"
+                currModelName = hackModel.name;
                 scene.add( gltf.scene );
 
-                model.position.x = 2;
-                model.scale *= 4;
+                hackModel.position.x = 2;
+                hackModel.scale *= 4;
 
             }, undefined, function ( error ) {
 
                 console.error( error );
 
             } );
+            loader.load('./LiDAR/TARoom.glb', function ( gltf ) {
+                taModel = gltf.scene;
+                taModel.name = "TA Room"
+                taModel.position.x = -2;
+                taModel.position.z = 1;
+                taModel.scale *= 4;
+
+            }, undefined, function ( error ) {
+
+                console.error( error );
+
+            } );
+
+            document.getElementById("modelBttn").innerHTML = "Switch to TA Room";
+            function switchModel() {
+                
+                document.getElementById("modelBttn").innerHTML = "Switch to " + currModelName;
+                if (currModelName == hackModel.name)
+                {
+                    scene.remove(hackModel)
+                    scene.add(taModel);
+                    currModelName = taModel.name;
+                }
+                else
+                {
+                    scene.remove(taModel)
+                    scene.add(hackModel);
+                    currModelName = hackModel.name;
+                }
+            }
 
             const animate = function () {
 				requestAnimationFrame( animate );

@@ -95,3 +95,28 @@ canvas{
     border: 3px solid #FFDF6C;
     padding: 10px;
 }
+
+#modelBttn {
+    margin: auto;
+    margin-bottom: 10px;
+    display: block;
+    padding: 10px 20px;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+    background-color: #FFDF6C;
+    border: none;
+    border-radius: 3px;
+    box-shadow: 0 3px #999;
+  }
+  
+  #modelBttn:hover {
+      background-color: #f8ebbe;
+    }
+  
+  #modelBttn:active {
+    background-color: #FFDF6C;
+    box-shadow: 0 1px #666;
+    transform: translateY(4px);
+  }
