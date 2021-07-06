@@ -11,20 +11,55 @@ header {
     position: fixed;
 }
 
-a {
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+  
+li {
+    float: left;
+    border-right: 1px solid #bbb;
+}
+
+li:last-child {
+    border-right: none;
+}
+  
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+  
+li a:hover:not(.active) {
+    background-color: #111;
+}
+  
+.active {
+    background-color: #04AA6D;
+}
+
+/* a {
     text-decoration: none;
     font-family: 'Poppins', sans-serif;
 }
 
-/* .navbar a{
+.navbar a{
     display: block;
     float: left;
     padding: 3px;
     color: black;
-} */
+}
 
 .navbar a:hover{
-    background: #932242;
+    background: #b99e04;
+
 }
 
 a:link, a:visited{
@@ -33,11 +68,11 @@ a:link, a:visited{
     text-decoration: underline;
 }
 
-/* a:link:hover{
+a:link:hover{
     padding: 3px;
     background-color: #932242;
     text-decoration: underline overline;
-} */
+}
 
 nav {
     text-align: center;
@@ -45,9 +80,11 @@ nav {
 }
 
 nav li {
-    display: inline;
+    display: block;
+    float: left;
     padding-top: 10px;
     padding: 10px;
+    text-align: center;
 }
 
 nav li a{
@@ -56,7 +93,7 @@ nav li a{
     font-size: 20px;
     font-weight: bold;
     font-family: 'Roboto Condensed', sans-serif;
-}
+} */
 
 h1, h2, h3, h4, h5{
     text-decoration: none;
@@ -74,11 +111,22 @@ h1{
     margin: auto;
     width: 80%;
     text-align: justify;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
 }
 
 .links{
     margin: auto;
     text-align: center;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    color: black;
+}
+
+.links a:visited{
+    padding: 3px;
+    color: black;
+    text-decoration: underline;
 }
 
 .images{
