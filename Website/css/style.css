@@ -115,6 +115,14 @@ h1{
     font-family: 'Poppins', sans-serif;
 }
 
+.publication{
+    margin: auto;
+    width: 80%;
+    text-align: center;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+}
+
 .links{
     margin: auto;
     text-align: center;
@@ -134,7 +142,7 @@ h1{
     margin-left: auto;
     margin-right: auto;
     width: 80%;
-    padding-left: 10%;
+    text-align: center;
 }
 
 canvas{
