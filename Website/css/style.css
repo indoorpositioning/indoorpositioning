@@ -11,6 +11,11 @@ header {
     position: fixed;
 }
 
+.container-1400 {
+    width: 1400px;
+    margin: 0 auto;
+}
+
 ul {
     list-style-type: none;
     margin: 0;
@@ -45,56 +50,6 @@ li a:hover:not(.active) {
     background-color: #04AA6D;
 }
 
-/* a {
-    text-decoration: none;
-    font-family: 'Poppins', sans-serif;
-}
-
-.navbar a{
-    display: block;
-    float: left;
-    padding: 3px;
-    color: black;
-}
-
-.navbar a:hover{
-    background: #b99e04;
-
-}
-
-a:link, a:visited{
-    padding: 3px;
-    color: black;
-    text-decoration: underline;
-}
-
-a:link:hover{
-    padding: 3px;
-    background-color: #932242;
-    text-decoration: underline overline;
-}
-
-nav {
-    text-align: center;
-    position: absolute;
-}
-
-nav li {
-    display: block;
-    float: left;
-    padding-top: 10px;
-    padding: 10px;
-    text-align: center;
-}
-
-nav li a{
-    text-decoration: none;
-    text-transform: uppercase;
-    font-size: 20px;
-    font-weight: bold;
-    font-family: 'Roboto Condensed', sans-serif;
-} */
-
 h1, h2, h3, h4, h5{
     text-decoration: none;
     text-transform: uppercase;
@@ -108,23 +63,18 @@ h1{
 }
 
 .paragraph{
-    margin: auto;
-    width: 80%;
     text-align: justify;
     text-decoration: none;
     font-family: 'Poppins', sans-serif;
 }
 
 .publication{
-    margin: auto;
-    width: 80%;
     text-align: center;
     text-decoration: none;
     font-family: 'Poppins', sans-serif;
 }
 
 .links{
-    margin: auto;
     text-align: center;
     text-decoration: none;
     font-family: 'Poppins', sans-serif;

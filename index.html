@@ -15,12 +15,14 @@
             <div class="navbar">
                 <nav>
                     <ul id="header_list">
-                        <li><a href="#Abstract">Abstract</a> </li>
-                        <li><a href="#Datasets">Datasets</a></li>
-                        <li><a href="#Environments">Environments</a></li>
-                        <li><a href="#Results">Results</a></li>
-                        <li><a href="#Future_Work">Future Work</a></li>
-                        <li><a href="#Publication">Publication</a></li>
+                        <div class="container-1400">
+                            <li><a href="#Abstract">Abstract</a> </li>
+                            <li><a href="#Datasets">Datasets</a></li>
+                            <li><a href="#Environments">Environments</a></li>
+                            <li><a href="#Results">Results</a></li>
+                            <li><a href="#Future_Work">Future Work</a></li>
+                            <li><a href="#Publication">Publication</a></li>
+                        </div>
                     </ul>
                 </nav>
             </div>
@@ -30,26 +32,33 @@
         
         <a id="Abstract">
             <h2>Abstract</h2>
-
-            <div class="paragraph">
-                <p>  Accurate indoor positioning has been the subject of investigation for many years. Modern smartphones have a wide suite of internal sensors that allow us to measure different signals. However, traditional positioning methods, such as GPS, typically fail when measurements are taken indoors. Many different solutions have been proposed that rely on various data inputs, including Wi-Fi and camera input. Some proposed methods have used auxiliary data inputs such as BLE Beacons. However, any auxiliary input would require additional infrastructure to purchase and maintain, increasing expenses. This paper explores a variety of indoor positioning techniques that do not require any additional infrastructure beyond what is typically found in a commercial environment. This research explores, implements, and measures, through standardized tests, Wi-Fi RSSI, RTT, and marker-based trilateration, as well as, fingerprinting with two separate machine learning models, and also tests an implementation of PoseNet. It compares and contrasts the various methods, categorizing them according to a proposed set of criteria for evaluating a commercially deployable indoor positioning solution. The paper closes with a brief summary of the techniques that were studied and proposes investigation into various related topics and improvements, as well as future directions.</p>
+            
+            <div class="container-1400">
+                <div class="paragraph">            
+                    <p> Accurate indoor positioning has been the subject of investigation for many years. Modern smartphones have a wide suite of internal sensors that allow us to measure different signals. However, traditional positioning methods, such as GPS, typically fail when measurements are taken indoors. Many different solutions have been proposed that rely on various data inputs, including Wi-Fi and camera input. Some proposed methods have used auxiliary data inputs such as BLE Beacons. However, any auxiliary input would require additional infrastructure to purchase and maintain, increasing expenses. This paper explores a variety of indoor positioning techniques that do not require any additional infrastructure beyond what is typically found in a commercial environment. This research explores, implements, and measures, through standardized tests, Wi-Fi RSSI, RTT, and marker-based trilateration, as well as, fingerprinting with two separate machine learning models, and also tests an implementation of PoseNet. It compares and contrasts the various methods, categorizing them according to a proposed set of criteria for evaluating a commercially deployable indoor positioning solution. The paper closes with a brief summary of the techniques that were studied and proposes investigation into various related topics and improvements, as well as future directions.</p>
+                </div>
             </div>
 
             <h3>Techniques Explored</h3>
+            
 
-            <div class="paragraph">
-                <p>The techniques that we explored were RSSI Trilateration, RTT Trilateration, Marker-based Trilateration, RSSI Fingerprinting, RTT Fingerprinting, Marker-based Fingerprinting, and PoseNet. The fingerprinting techniques included both k-nearest neighbors and neural network implementations.</p>
+            <div class="container-1400">
+                <div class="paragraph">
+                    <p> The techniques that we explored were RSSI Trilateration, RTT Trilateration, Marker-based Trilateration, RSSI Fingerprinting, RTT Fingerprinting, Marker-based Fingerprinting, and PoseNet. The fingerprinting techniques included both k-nearest neighbors and neural network implementations.</p>
+                </div>
             </div>
         </a>
         
             
         <a id="Datasets">
             <h2>Datasets</h2>
-            <div class="links">
-                <a href="https://github.com/indoorpositioning/indoorpositioning/tree/main/Datasets/Hacklab">Hacklab</a>
-                <a href="https://github.com/indoorpositioning/indoorpositioning/tree/main/Datasets/TARoom/Marker-based">TA Room - Marker-based Data</a>
-                <a href="https://github.com/indoorpositioning/indoorpositioning/tree/main/Datasets/TARoom/RTT">TA Room - RTT Data</a>
-                <a href="https://github.com/indoorpositioning/indoorpositioning/tree/main/Datasets/TARoom/RSSI">TA Room - RSSI Data</a>
+            <div class="container-1400">
+                <div class="links">
+                    <a href="https://github.com/indoorpositioning/indoorpositioning/tree/main/Datasets/Hacklab">Hacklab</a>
+                    <a href="https://github.com/indoorpositioning/indoorpositioning/tree/main/Datasets/TARoom/Marker-based">TA Room - Marker-based Data</a>
+                    <a href="https://github.com/indoorpositioning/indoorpositioning/tree/main/Datasets/TARoom/RTT">TA Room - RTT Data</a>
+                    <a href="https://github.com/indoorpositioning/indoorpositioning/tree/main/Datasets/TARoom/RSSI">TA Room - RSSI Data</a>
+                </div>
             </div>
         </a>
         <a id="Environments">
@@ -112,19 +121,21 @@
         </a>
 
         <a id="Future_Work">
-            <h2>Future Work</h2>
-            <h4>Exploring Scalability</h4>
-            <div class="paragraph">
-                <p>  Most of the tests in this work were conducted in a controlled environment (5x10 m). It would be valuable to explore how each of these techniques performs in larger, noisier environments.</p>
-            </div>
-            <h4>Combining Techniques</h4>
-            <div class="paragraph">
-                <p>  All of the solutions presented in this research were tested in isolation. A potential area to look into would be how well these techniques perform with each other. This could potentially lead to the creation of large interdependent indoor localization solutions. &nbsp;</p>
-            </div>
-            <h4>Developing Smartphone Data Generation Tools</h4>
-            <div class="paragraph">
-                <p>  As depth sensors and LIDAR sensors are starting to be integrated into smartphones, like the iPhone 12 Pro, collecting accurate data to train indoor camera relocalization models, like PoseNet, may become easier. One area to look into would be to leverage such sensors along with AR APIs to develop such tools for generating datasets.&nbsp;</p>
-                <p>  An example of an environment scanned with iPhone 12 Pro&apos;s LIDAR sensor is below.</p>
+            <div class="container-1400">
+                <h2>Future Work</h2>
+                <h4>Exploring Scalability</h4>
+                <div class="paragraph">
+                    <p> Most of the tests in this work were conducted in a controlled environment (5x10 m). It would be valuable to explore how each of these techniques performs in larger, noisier environments.</p>
+                </div>
+                <h4>Combining Techniques</h4>
+                <div class="paragraph">
+                    <p> All of the solutions presented in this research were tested in isolation. A potential area to look into would be how well these techniques perform with each other. This could potentially lead to the creation of large interdependent indoor localization solutions. &nbsp;</p>
+                </div>
+                <h4>Developing Smartphone Data Generation Tools</h4>
+                <div class="paragraph">
+                    <p> As depth sensors and LIDAR sensors are starting to be integrated into smartphones, like the iPhone 12 Pro, collecting accurate data to train indoor camera relocalization models, like PoseNet, may become easier. One area to look into would be to leverage such sensors along with AR APIs to develop such tools for generating datasets.&nbsp;</p>
+                    <p> An example of an environment scanned with iPhone 12 Pro&apos;s LIDAR sensor is below.</p>
+                </div>
             </div>
         </a>
          
@@ -216,11 +227,13 @@
         </div>
         
         <a id="Publication">
-            <h2>Publication</h2>
-            <div class="publication">
-                <p>Ali Raza, Lazar Lolic, Shahmir Akhter, Michael Liut.</p>
-                <p>Comparing and Evaluating Indoor Positioning Techniques.​</p>
-                <p>To Appear in the Proceedings of the 2021 International Conference on Indoor Positioning and Indoor Navigation (IPIN 2021), Lloret de Mar, Spain, November 2021.</p>
+            <div class="container-1400">
+                <h2>Publication</h2>
+                <div class="publication">
+                    <p>Ali Raza, Lazar Lolic, Shahmir Akhter, Michael Liut.</p>
+                    <p>Comparing and Evaluating Indoor Positioning Techniques.​</p>
+                    <p>To Appear in the Proceedings of the 2021 International Conference on Indoor Positioning and Indoor Navigation (IPIN 2021), Lloret de Mar, Spain, November 2021.</p>
+                </div>
             </div>
         </a>
     </body>
