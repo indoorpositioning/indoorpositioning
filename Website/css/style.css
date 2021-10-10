@@ -95,6 +95,10 @@ h1{
     text-align: center;
 }
 
+.left, .middle, .right {
+    display: inline-block;
+}
+
 canvas{
     margin: auto;
     width: 50%;
