@@ -1,6 +1,6 @@
 <div align="center">
 
-# Investigation of Indoor Positioning Techniques
+# Comparing and Evaluating Indoor Positioning Techniques
 
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
