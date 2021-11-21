@@ -3,6 +3,10 @@ body {
     color: #202020; 
 }
 
+html {
+    scroll-padding-top: 60px;
+}
+
 header {
     height: 60px;
     top: 0;
