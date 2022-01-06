@@ -33,6 +33,18 @@ Distributed under the MIT License. See `LICENSE` for more information.
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 
+## Citation
+If you find this work useful in your research, please cite our publication
+'''
+@INPROCEEDINGS{evalindoorpos21,
+  author={Raza, Ali and Lolic, Lazar and Akhter, Shahmir and Liut, Michael},
+  booktitle={2021 International Conference on Indoor Positioning and Indoor Navigation (IPIN)}, 
+  title={Comparing and Evaluating Indoor Positioning Techniques}, 
+  year={2021},
+  pages={1-8},
+  doi={10.1109/IPIN51156.2021.9662632}}
+'''
+
 [contributors-shield]: https://img.shields.io/github/contributors/indoorpositioning/indoorpositioning
 [contributors-url]: https://github.com/indoorpositioning/indoorpositioning/graphs/contributors
 [forks-shield]: https://img.shields.io/github/forks/indoorpositioning/indoorpositioning
