@@ -34,7 +34,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 
 ## Citation
-If you find this work useful in your research, please cite our publication
+If you find this work useful in your research, please cite [our publication](https://ieeexplore.ieee.org/document/9662632)
 ```
 @INPROCEEDINGS{evalindoorpos21,
   author={Raza, Ali and Lolic, Lazar and Akhter, Shahmir and Liut, Michael},
